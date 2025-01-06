@@ -13,7 +13,7 @@ const Contact = () => {
     e.preventDefault()
     setLoading(true);
     try {
-      const {data} = await axios.post('http://localhost:3000/send/mail', {name, email, message}, 
+      const {data} = await axios.post('https://gym-website-backend.vercel.app/send/mail', {name, email, message}, 
       {withCredentials:true, headers: {'Content-Type': 'application/json'}})
       setEmail('')
       setName('')
